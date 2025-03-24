@@ -130,28 +130,6 @@ A planilha Excel deve seguir o exemplo estrutural abaixo, podendo ter quantos "C
 
 4. Clique no botão "Enviar" para enviar os emails.
 
-## Estrutura do Código
-
-- `main.py`: Inicializa e executa a aplicação Kivy.
-- `app/auth/authenticator.py`: Lida com a aquisição e gerenciamento de tokens de acesso usando a biblioteca MSAL.
-- `app/config/log_settings.py`: Configurações de logging para a aplicação.
-- `app/config/settings.py`: Carrega e armazena configurações a partir de variáveis de ambiente.
-- `app/controller/home_controller.py`: Lida com a lógica principal para seleção de arquivos Excel, processamento, formatação e envio de emails.
-- `app/enum/email_format_type.py`: Enum para os diferentes tipos de formatação de email.
-- `app/enum/email_recipient_type.py`: Enum para os diferentes tipos de destinatários de email.
-- `app/enum/excel_columns.py`: Enum para as colunas no arquivo Excel usado para processamento de emails.
-- `app/exceptions/asyncio_exceptions.py`: Exceções para erros no processo asyncio.
-- `app/exceptions/authentication_exceptions.py`: Exceções para erros no processo de autenticação MSAL.
-- `app/exceptions/configuration_exceptions.py`: Exceções para erros na configuração de variáveis de ambiente e logging.
-- `app/exceptions/email_exceptions.py`: Exceções para erros no envio de emails.
-- `app/exceptions/excel_exceptions.py`: Exceções para erros na leitura e escrita de arquivos Excel.
-- `app/exceptions/main_exceptions.py`: Exceções para erros durante a execução principal.
-- `app/services/email_formatter.py`: Formata as mensagens de email.
-- `app/services/process_excel.py`: Processa arquivos Excel e extrai corpos, assuntos e destinatários de emails.
-- `app/services/send_email.py`: Envia emails assincronamente usando aiohttp.
-- `app/views/main.kv`: Define a interface da aplicação Kivy.
-- `app/views/main_screen.py`: Lida com a interface do usuário para a aplicação de envio de emails.
-
 ## TODOs
 
 - Arrumar a quebra de linha para corpos de email sem formatação
@@ -162,10 +140,6 @@ A planilha Excel deve seguir o exemplo estrutural abaixo, podendo ter quantos "C
 - Corrigir feedbacks visuais dos botões, dos spinners e etc
 - Corrigir o layout, melhorar a interface
 - Adicionar novos tipos de formatação e algo mais personalizado em relação ao tamanho da fonte
-
-## FIXME
-
-- Corrigir o aplicativo quebrando se abrir a aba de seleção de planilha e não selecionar nada
 
 ## Preview
 

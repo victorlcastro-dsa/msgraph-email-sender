@@ -43,6 +43,7 @@ class HomeController:
             self.selected_file = file_path
             return f"Selected file: {file_path}"
         else:
+            self.selected_file = None
             return "No file selected"
 
     async def send_emails(

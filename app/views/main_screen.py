@@ -182,7 +182,9 @@ class MainScreen(BoxLayout):
         )
         self.add_widget(self.send_button)
 
-        self.status_label = Label(text="", size_hint_y=None, height=50, color=(1, 1, 1, 1))
+        self.status_label = Label(
+            text="", size_hint_y=None, height=50, color=(1, 1, 1, 1)
+        )
         self.add_widget(self.status_label)
 
     def open_file_dialog(self, instance: Button) -> None:
@@ -199,11 +201,14 @@ class MainScreen(BoxLayout):
         """
         Updates the body spinner values based on the selected Excel file.
         """
-        email_data = self.controller._process_excel()
-        body_columns = [
-            f"CORPO E-MAIL {i + 1}" for i in range(len(email_data["bodies"][0]))
-        ]
-        self.body_spinner.values = body_columns
+        if self.controller.selected_file:
+            email_data = self.controller._process_excel()
+            body_columns = [
+                f"CORPO E-MAIL {i + 1}" for i in range(len(email_data["bodies"][0]))
+            ]
+            self.body_spinner.values = body_columns
+        else:
+            self.body_spinner.values = []
 
     def on_body_spinner_select(self, spinner, value) -> None:
         """
