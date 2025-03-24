@@ -56,9 +56,9 @@ class EmailFormatter:
         formatted_body = ""
         for i, body in enumerate(body_parts):
             format_info = formats.get(f"CORPO E-MAIL {i + 1}", {})
-            font_size = self.settings.DEFAULT_FONT_SIZE  # Default font size
+            font_size = self.settings.DEFAULT_FONT_SIZE
             if format_info.get("formats", {}).get(EmailFormatType.AUMENTAR_FONTE.value):
-                font_size += self.settings.FONT_SIZE_INCREMENT  # Increment font size
+                font_size += self.settings.FONT_SIZE_INCREMENT
             if format_info.get("formats", {}).get(EmailFormatType.NEGRITO.value):
                 body = f"<b>{body}</b>"
             if format_info.get("formats", {}).get(EmailFormatType.ITALICO.value):

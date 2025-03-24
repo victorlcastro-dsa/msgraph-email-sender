@@ -130,14 +130,18 @@ A planilha Excel deve seguir o exemplo estrutural abaixo, podendo ter quantos "C
 
 4. Clique no botão "Enviar" para enviar os emails.
 
+## FIXME
+
+- Fazer com que a quebra de linha funcione para corpos de email sem formatação
+- Fazer com que o hiperlink funcione corretamente
+- Corrigir feedbacks visuais ao selecionar e deselecionar os botões de formatação, spinners e etc
+
 ## TODOs
 
-- Arrumar a quebra de linha para corpos de email sem formatação
 - Colocar toda a interface e as mensagens de resposta em português
 - Separar as responsabilidades em controller, corrigir nome de métodos, e separar as funções em arquivos diferentes
 - Fazer isso com a main screen também, melhorar a organização do código
 - Tirar números mágicos, fazer uso de enum
-- Corrigir feedbacks visuais dos botões, dos spinners e etc
 - Corrigir o layout, melhorar a interface
 - Adicionar novos tipos de formatação e algo mais personalizado em relação ao tamanho da fonte
 
