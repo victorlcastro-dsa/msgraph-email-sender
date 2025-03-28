@@ -71,7 +71,7 @@ class Settings:
         self.APP_ICON_PATH: str = self._get_env_var("APP_ICON_PATH")
         self.DEFAULT_FONT_SIZE: float = float(self._get_env_var("DEFAULT_FONT_SIZE", 1))
         self.FONT_SIZE_INCREMENT: float = float(
-            self._get_env_var("FONT_SIZE_INCREMENT", 0.50)
+            self._get_env_var("FONT_SIZE_INCREMENT", 0.01)
         )
         self.INVALID_VALUES: List[str] = self._get_env_var(
             "INVALID_VALUES", "x,nan,"

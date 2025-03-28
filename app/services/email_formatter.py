@@ -65,8 +65,9 @@ class EmailFormatter:
                 body = f"<i>{body}</i>"
             if format_info.get("formats", {}).get(EmailFormatType.SUBLINHADO.value):
                 body = f"<u>{body}</u>"
-            if format_info.get(EmailFormatType.HYPERLINK.value):
+            if format_info.get("formats", {}).get(EmailFormatType.HYPERLINK.value):
                 body = f"<a href='{body}'>{body}</a>"
+            body = body.replace("\n", "<br>")  # Preserve line breaks
             formatted_body += f"<span style='font-size: {font_size}em;'>{body}</span>"
             line_breaks = format_info.get("line_breaks", 0)
             formatted_body += "<br>" * line_breaks

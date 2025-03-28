@@ -74,6 +74,7 @@ class ExcelProcessor:
             col for col in df.columns if col.startswith(ExcelColumns.BODY_PREFIX.value)
         ]
         for col in body_columns:
+            df[col] = df[col].astype(str)  # Convert column values to strings
             df = df[~df[col].str.lower().isin(self.settings.INVALID_VALUES)]
         return df
 
